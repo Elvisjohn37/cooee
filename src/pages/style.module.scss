@@ -1,0 +1,25 @@
+
+.cars {
+    form {
+
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+
+        select {
+            margin: 5px;
+        }
+
+        .upload {
+            margin: 20px 0;
+
+            input {
+                margin-top: 10px;
+            }
+
+            button {
+                margin-top: 10px;
+            }
+        }
+    }
+}
