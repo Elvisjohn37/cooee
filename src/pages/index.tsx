@@ -25,7 +25,7 @@ export default function Home() {
 
   const handleSetmake = (e: ChangeEvent<HTMLInputElement>) => {
     const vehicle = e.target.value;
-    setSelectedVehicle({
+    vehicle != 'make' && setSelectedVehicle({
       model: cars[vehicle],
       selectedMake: vehicle,
       selectedVehicle: cars[vehicle],
@@ -35,7 +35,7 @@ export default function Home() {
   const handleSetModel = (e: ChangeEvent<HTMLInputElement>) => {
     const selectedModel = e.target.value;
     
-    setSelectedVehicle({
+    selectedModel != 'model' && setSelectedVehicle({
       ...selectedVehicle,
       badge: selectedVehicle.model[selectedModel],
       selectedModel
@@ -46,7 +46,7 @@ export default function Home() {
   const handleSetBadge = (e: ChangeEvent<HTMLInputElement>) => {
     const selectedBadge = e.target.value;
     
-    setSelectedVehicle({
+    selectedBadge != 'badge' && setSelectedVehicle({
       ...selectedVehicle,
       selectedBadge
     });
